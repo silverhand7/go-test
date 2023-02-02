@@ -96,3 +96,9 @@ func TestTableTest(t *testing.T) {
 
 	assert.True(t, true)
 }
+
+func BenchmarkHelloWorld(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		HelloWorld("Jon Snow is Aegon Targaryen")
+	}
+}
